@@ -3,22 +3,21 @@
 #include <stdio.h>
 
 /**
- * is_palindrome - functions that that checks if
- * a singly linked list is a palindrome.
- * @head: head of te list
- *
- * Return: 0 if is not palindrome, 1 if it is a palindrome
- */
+  * is_palindrome - Checks if a singly linked list is a palindrome
+  * @head: The head of the singly linked list
+  *
+  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
+  */
 int is_palindrome(listint_t **head)
 {
 	listint_t *start = NULL, *end = NULL;
-	unsigned int i = 0, len = 0, len_list = 0;
+	unsigned int i = 0, len = 0, len_cyc = 0, len_list = 0;
 
 	if (head == NULL)
-		return (0);
+	return (0);
 
 	if (*head == NULL)
-		return (1);
+	return (1);
 
 	start = *head;
 	len = listint_len(start);
@@ -32,6 +31,7 @@ int is_palindrome(listint_t **head)
 			return (0);
 		len_list = len_list - 2;
 	}
+
 	return (1);
 }
 /**
@@ -57,8 +57,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 			++iter_times;
 		}
 	}
+
 	return (NULL);
 }
+
 /**
   * listint_len - Counts the number of elements in a linked list
   * @h: The linked list to count
@@ -67,13 +69,13 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
   */
 size_t listint_len(const listint_t *h)
 {
-	int length = 0;
+	int lenght = 0;
 
 	while (h != NULL)
 	{
-		++length;
+		++lenght;
 		h = h->next;
 	}
 
-	return (length);
+	return (lenght);
 }
