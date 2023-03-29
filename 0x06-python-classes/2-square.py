@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# 0-square.py by Fatimah
+"""A class that defines a square """
 class Square:
     def __init__(self, size=o):
         """__init__
