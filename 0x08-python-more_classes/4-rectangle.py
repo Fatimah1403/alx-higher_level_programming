@@ -66,9 +66,9 @@ class Rectangle:
             if i < self.__height - 1:
                 rect += "\n"
         return (rect)
+
     def __repr__(self):
         """ Return a string representation of the rectangle
             to be able to recreate a new instance.
         """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
