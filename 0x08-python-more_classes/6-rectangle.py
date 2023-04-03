@@ -15,7 +15,7 @@ class Rectangle:
             ValueError: if size is less than zero
         """
 
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -77,5 +77,5 @@ class Rectangle:
 
     def __del__(self):
         """ Message to print when an instance of Rectangle is deleted"""
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
