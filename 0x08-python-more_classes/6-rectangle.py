@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""A module that defines a rectangle """
+"""A class that defines a rectangle"""
 
 
 class Rectangle:
     """this represents a rectangle"""
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initializing this rectangle class
@@ -14,10 +15,9 @@ class Rectangle:
             TypeError: if size is not integer
             ValueError: if size is less than zero
         """
-
-        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -48,34 +48,32 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """ calculate the area of a rectangle """
+        """Returns the area of the rectangle"""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """ calculate the perimete of a rectangle"""
+        """Returns the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return (0)
-        return ((2 * self.__width) + (2 * self.__height))
+        return ((self.__width * 2) + (self.__height * 2))
 
-    def __str__(self):
-        """ Represent the rectangle with the # character"""
-        if self.__width == 0 or self.__width == 0:
+    def __str__(self) -> str:
+        """presents a diagram of the rectangle defined for an object"""
+        if self.__width == 0 or self.__height == 0:
             return ("")
-        rect = ""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                rect += "#"
-            if i < self.__height - 1:
-                rect += "\n"
-        return (rect)
+        rectangle = ""
+        for column in range(self.__height):
+            for row in range(self.__width):
+                rectangle += "#"
+            if column < self.__height - 1:
+                rectangle += "\n"
+        return (rectangle)
 
     def __repr__(self):
-        """ Return a string representation of the rectangle
-            to be able to recreate a new instance.
-        """
+        """returns a string representation of the rectangle"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """ Message to print when an instance of Rectangle is deleted"""
-        Rectangle.number_of_instances -= 1
+        """prints a message for every object that is deleted"""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
