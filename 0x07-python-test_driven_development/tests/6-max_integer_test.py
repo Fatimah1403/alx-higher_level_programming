@@ -10,7 +10,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_array(self):
         """ Test for an empty string """
         empty = []
-        self.asserteEqual(max_integer(empty), None)
+        self.assertEqual(max_integer(empty), None)
 
     def test_single_element(self):
         """ Test for a single element """
@@ -30,12 +30,12 @@ class TestMaxInteger(unittest.TestCase):
     def test_floats(self):
         """ Test for float lists """
         float_lists = [0.5, 4.5, 2.0, 7.7, 9.0, 15.2]
-        self.asserteEqual(max_integer(float_lists), 15.2)
+        self.assertEqual(max_integer(float_lists), 15.2)
 
     def test_floats_and_ints(self):
         """ Test for floats and int of a list """
         float_int = [0.5, 4, 2.0, 7, 10, 9.0, 15.2]
-        self.assertEqual(max_integer(float_int), 10)
+        self.assertEqual(max_integer(float_int), 15.2)
 
     def test_empty_string(self):
         """Test an empty string."""
