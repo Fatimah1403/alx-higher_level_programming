@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 The module is about adding two integers
-
+The 0-add_integer module supplies one function, add_integer(a, b).
 """
 
 
@@ -24,4 +24,4 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if ((not isinstance(b, int) and not isinstance(b, float))):
         raise TypeError("b must be an integer")
-    return (int(a + b))
+    return (int(a) + int(b))

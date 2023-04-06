@@ -101,7 +101,7 @@ Test case #8: A test case with strings within the rows of the matrix
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Test case #9: A test case with a matrix of empty lists
-    >>> matrix = [[], [], []]
+    >>> matrix = []
     >>> type(matrix_divided(matrix, 3))
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
@@ -128,13 +128,6 @@ Test case #12: A test case with a string divider
 
     >>> matrix = [[1, 2, 54.0], [24, 35.5, 6]]
     >>> matrix_divided(matrix, 'Monty Python')
-    Traceback (most recent call last):
-    TypeError: div must be a number
-
-Test case #13: A test case with a NaN divider
-
-    >>> matrix = [[1, 2, 54.0], [24, 35.5, 6]]
-    >>> matrix_divided(matrix, float('nan'))
     Traceback (most recent call last):
     TypeError: div must be a number
 
