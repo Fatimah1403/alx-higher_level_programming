@@ -15,7 +15,7 @@ def text_indentation(text):
 
     word = 0
 
-    while word < len(text) and text(word) == " ":
+    while word < len(text) and text[word] == " ":
         word = word + 1
 
     while word < len(text):
