@@ -40,8 +40,7 @@ Test case #1: A test case to order a disordered list of positive integers
 
     >>> print(my_list)
      [7, 6, 5, 4, 1]
-Test case #2: A test case for a empty list
-
+Test case #2: A test case for an empty list
     >>> my_list = MyList()
     >>> print(my_list)
     []
