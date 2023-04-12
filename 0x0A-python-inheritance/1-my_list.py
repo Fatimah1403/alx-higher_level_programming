@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""This module inherits from the list class"""
 
-""" Public instance of a method that prints the list"""
 
-
-def print_sorted(self):
-    """ print a sorted lists """
-    print(sorted(self))
+class MyList(list):
+    """A class that inherits from list"""
+    def print_sorted(self):
+        """prints a sorted list"""
+        print(sorted(self))
