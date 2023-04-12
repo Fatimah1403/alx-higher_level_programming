@@ -5,5 +5,4 @@
 
 def print_sorted(self):
     """ print a sorted lists """
-    if issubclass(MyList, list):
-        print(sorted(self))
+    print(sorted(self))
