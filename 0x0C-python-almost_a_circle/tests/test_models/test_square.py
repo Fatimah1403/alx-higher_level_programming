@@ -36,7 +36,7 @@ class test_square(unittest.TestCase):
         '''
         try:
             os.remove("Square.json")
-        except:
+        except IOError:
             pass
         del self.s
 
@@ -296,7 +296,7 @@ class test_square(unittest.TestCase):
         '''
         try:
             os.remove("Square.json")
-        except:
+        except IOError:
             pass
         r1 = Square(5, 0, 0, 346)
         Square.save_to_file([r1])
@@ -319,7 +319,7 @@ class test_square(unittest.TestCase):
         '''
         try:
             os.remove("Square.json")
-        except:
+        except IOError:
             pass
         r1 = Square(5, 0, 0, 346)
         Square.save_to_file(None)
@@ -335,7 +335,7 @@ class test_square(unittest.TestCase):
         '''
         try:
             os.remove("Square.json")
-        except:
+        except IOError:
             pass
         r1 = Square(5, 0, 0, 346)
         Square.save_to_file([r1])
@@ -346,7 +346,7 @@ class test_square(unittest.TestCase):
         self.assertEqual(str, type(content))
         try:
             os.remove("Square.json")
-        except:
+        except IOError:
             pass
 
     def test_json_string_type(self):

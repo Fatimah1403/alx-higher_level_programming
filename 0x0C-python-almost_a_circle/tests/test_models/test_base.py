@@ -4,6 +4,8 @@ from models.base import Base
 from models.square import Square
 import json
 import inspect
+import os
+from models.rectangle import Rectangle
 
 '''
     Creating test cases for the base module
@@ -138,3 +140,7 @@ class TestSquare(unittest.TestCase):
         """
         for func in self.setup:
             self.assertTrue(len(func[1].__doc__) >= 1)
+
+
+if __name__ == "__main__":
+    unittest.main()
