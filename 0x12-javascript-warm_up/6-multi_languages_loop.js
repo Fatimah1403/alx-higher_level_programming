@@ -2,7 +2,7 @@
 
 const myVars = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
-for (let i = 0; i < myvars.length; ++i) {
+for (let i = 0; i < myVars.length; ++i) {
   console.log(languages[i]);
 }
 
