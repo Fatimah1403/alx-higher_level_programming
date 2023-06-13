@@ -3,10 +3,11 @@
 const x = parseInt(process.argv[2]);
 
 function factorial (n) {
-	if (x === 0 || isNaN(x)) {
-		return 1;
-	}
+  if (n === 0 || isNaN(n)) {
+    return 1;
+  }
 
-	return x * factorial(x - 1);
+  return n * factorial(n - 1);
 }
-console.log(factorial(x));
+
+console.log(factorial(n));
