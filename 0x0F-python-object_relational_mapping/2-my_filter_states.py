@@ -4,7 +4,7 @@
 A script that takes in an argument and displays
 all values in the states table of hbtn_0e_0_usa
 where name matches the argument.
-
+i
 """
 import MySQLdb
 import sys
@@ -22,8 +22,6 @@ if __name__ == "__main__":
                 WHERE name LIKE BINARY '{}' \
                 ORDER BY states.id ASC".format(argv[4]))
 
+
     for row in cur.fetchall():
         print(row)
-
-    cur.close()
-    db.close()
