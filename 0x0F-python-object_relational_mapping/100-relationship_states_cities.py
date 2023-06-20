@@ -27,11 +27,10 @@ if __name__ == "__main__":
     session = Session()
 
     new_state_cal = State(name='California')
-    session.add(new_state_cal)
-    session.commit()
-
     new_city_san = City(name='San Francisco')
-    session.add(new_city_san)
+    new_state_cal.cities.append(new_city_san)
+
+    session.add(new_state_cal)
     session.commit()
 
     session.close()
