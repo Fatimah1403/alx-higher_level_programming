@@ -24,6 +24,6 @@ if __name__ == "__main__":
     session = Session()
 
     instance = session.query(State).filter(state.name.contains('a'))
-    if instance is None:
+    if instance is  not None:
         for instances in instance:
             print('{0}: {1}'.format(instance.id, instance.name))
