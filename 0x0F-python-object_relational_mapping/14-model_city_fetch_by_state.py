@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """
-This script lists all State objects
-from the database `hbtn_0e_6_usa`.
+This script prints all City objects
+from the database `hbtn_0e_14_usa`.
 """
 
 from sys import argv
 from model_state import State, Base
+from model_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_city import City
 
 if __name__ == "__main__":
     """
-    Access to the database and get the states
+    Access to the database and get the cities
     from the database.
     """
 
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     result = session.query(City, State).join(State)
 
     for city, state in result.all():
-        print("{}: ({:d}) {}".format(state.name, city.id, city.name))
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.commit()
     session.close()
