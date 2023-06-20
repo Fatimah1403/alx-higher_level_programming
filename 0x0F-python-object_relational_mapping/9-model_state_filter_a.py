@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 This script lists all State objects
+that contain the letter `a`
 from the database `hbtn_0e_6_usa`.
 """
 
@@ -11,7 +12,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    Access to the database and get the states
+    Access to the database and get a state
     from the database.
     """
 
@@ -23,7 +24,7 @@ if __name__ == "__main__":
 
     session = Session()
 
-    instance = session.query(State).filter(State.name.contains('a'))
-    if instance is  not None:
-        for instances in instance:
-            print('{0}: {1}'.format(instance.id, instance.name))
+    states = session.query(State).filter(State.name.contains('a'))
+    if states is not None:
+        for state in states:
+            print('{0}: {1}'.format(state.id, state.name))
