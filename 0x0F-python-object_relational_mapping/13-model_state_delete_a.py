@@ -26,7 +26,7 @@ if __name__ == "__main__":
     instances = session.query(State).filter(State.name.contains('a'))
     if instances is not None:
         for instance in instances:
-            session.delete(instances)
+            session.delete(instance)
 
     session.commit()
     session.close()
