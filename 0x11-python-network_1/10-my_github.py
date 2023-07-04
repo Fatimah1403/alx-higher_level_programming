@@ -13,9 +13,8 @@ from requests.auth import HTTPBasicAuth
 import requests
 import sys
 
+
 if __name__ == "__main__":
-    user = sys.argv[1]
-    pwd = sys.argv[2]
-    auth = HTTPBasicAuth(user, pwd)
-    r = requests.get('https://api.github.com/user', auth=auth)
-    print("Not a valid JSON")
+    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    r = requests.get("https://api.github.com/user", auth=auth)
+    print(r.json().get("id"))
