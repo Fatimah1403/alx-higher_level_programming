@@ -14,13 +14,8 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    r = requests.get(
-        'https://api.github.com/user',
-        auth=HTTPBasicAuth(user, pwd)
-    )
-
-    try:
-        data = t.json()
-        print(data.get('id'))
-    except IOError:
-        print("Not a valid JSON")
+    user = sys.argv[1]
+    pwd = sys.argv[2]
+    auth = HTTPBasicAuth(user, pwd)
+    r = requests.get('https://api.github.com/user', auth=auth)
+    print("Not a valid JSON")
