@@ -6,7 +6,7 @@ The first argument will be the repository name
 The second argument will be the owner name
 """
 import sys
-import urllib.requests
+import requests
 
 if __name__ == "__main__":
     rep_name = sys.argv[1]
