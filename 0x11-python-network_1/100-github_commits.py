@@ -9,17 +9,15 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    rep_name = sys.argv[1]
-    owner_name = sys.argv[2]
+    url = "https://api.github.com/repos/{}/{}/commits".format(
+        sys.argv[2], sys.argv[1])
 
-    url = "https://api.github.com/repos/{}/{}/commits/".format(
-            owner_name, rep_name)
     r = requests.get(url)
-    commits = r.json
+    commits = r.json()
     try:
-        for x in range(10):
+        for i in range(10):
             print("{}: {}".format(
-                commits[x].get("sha")
-                commits[x].get("commit").get("Author").get("name")))
+                commits[i].get("sha"),
+                commits[i].get("commit").get("author").get("name")))
     except ValueError:
         print("Not a valid JSON")
