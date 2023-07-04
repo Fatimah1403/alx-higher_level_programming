@@ -19,5 +19,5 @@ if __name__ == "__main__":
             print("{}: {}".format(
                 commits[i].get("sha"),
                 commits[i].get("commit").get("author").get("name")))
-    except ValueError:
-        print("Not a valid JSON")
+    except IndexError:
+        pass
