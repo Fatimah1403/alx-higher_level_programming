@@ -12,11 +12,10 @@ if __name__ == "__main__":
     rep_name = sys.argv[1]
     owner_name = sys.argv[2]
 
-    url = "https://developer.github.com/repos/{}/{}/commits/".format(
+    url = "https://api.github.com/repos/{}/{}/commits/".format(
             owner_name, rep_name)
     r = requests.get(url)
     commits = r.json
-
     try:
         for x in range(10):
             print("{}: {}".format(
