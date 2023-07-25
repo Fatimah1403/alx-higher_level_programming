@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "standard",
+    "plugin:semistandard/recommended"
+  ],
+  "rules": {
+    "semi": ["error", "always"]
+  }
+}
+
